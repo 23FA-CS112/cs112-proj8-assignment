@@ -34,5 +34,5 @@
 .DS_Store
 Thumbs.db
 /*.dSYM/
-proj5
+main
 tester
