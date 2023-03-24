@@ -9,12 +9,12 @@ enum Direction { NORTH = 0, WEST = 1, SOUTH = 2, EAST = 3 };
 
 class Location {
    public:
-    int x, y;
+    int row, col;
     int dir;
 
     Location(int i, int j) {
-        x = i;
-        y = j;
+        row = i;
+        col = j;
         // Initially direction set to -1 -- no direction tried.
         dir = -1;
     }
@@ -37,7 +37,7 @@ char dirToChar(int d) {
 
 // output a Location object.
 ostream &operator<<(ostream &os, const Location &n) {
-    os << '(' << n.x << ", " << n.y << ", " << dirToChar(n.dir) << ") ";
+    os << '(' << n.row << ", " << n.col << ", " << dirToChar(n.dir) << ") ";
     return os;
 }
 
@@ -62,9 +62,9 @@ bool visited[100][100];
 int numRows, numCols;
 
 // Starting location
-int startX, startY;
+int startRow, startCol;
 // Location of the goal.
-int goalX, goalY;
+int goalRow, goalCol;
 
 /*
  * read the maze from the given file, into the maze variable.
