@@ -104,8 +104,9 @@ int main() {
 
     if (isReachable()) {
         cout << "Path Found!" << '\n';
-    } else
+    } else {
         cout << "No Path Found!" << '\n';
+    }
 
     return 0;
 }
